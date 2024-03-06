@@ -1,0 +1,63 @@
+﻿@page "/"
+    <PageTitle>Index</PageTitle>
+
+    <h1>Hello, world!</h1>
+
+    Welcome to your new app.
+
+    <studs-form-control as="fieldset" display="block">
+        <studs-label>Label</studs-label>
+        <studs-radio-group name="radiogroup" value="option-2">
+            <studs-radio value="option-1" label="Option 1">Option 1</studs-radio>
+            <studs-radio value="option-2" label="Option 1">Option 2</studs-radio>
+            <studs-radio value="option-3" label="Option 1">Option 3</studs-radio>
+        </studs-radio-group>
+        <studs-helper-text>Helper text</studs-helper-text>
+        <studs-error-message>There is an error</studs-error-message>
+    </studs-form-control>
+    <studs-form-control invalid=@isError>
+        <studs-label>@DropdownLabel</studs-label>
+            <StudsDropdown Size="@Size" Options="@options" />
+            <studs-helper-text>@DropdownHelperText</studs-helper-text>
+            <studs-error-message>@ErrorText</studs-error-message>
+        </studs-form-control>
+    <studs-form-control>
+        <studs-label>Input Label using @@binds</studs-label>       
+        @* <studs-input @bind-Value:event="onchange" @bind-Value:get="InputValue"  placeholder="Add Text"></studs-input> *@
+        <studs-input @bind-Value:event="onchange" @bind-Value:get="InputValue"  placeholder="Add Text"></studs-input>
+        <studs-helper-text><code>InputValue</code>: @InputValue</studs-helper-text>
+    </studs-form-control>
+    <studs-date-control>
+        <studs-label>Input Label using @@binds</studs-label>
+        <studs-date-picker @bind-Value:event="onchange" @bind-Value:get="DateValue" placeholder="Add Text"></studs-date-picker>
+        <studs-helper-text><code>InputValue</code>: @InputValue</studs-helper-text>
+    </studs-date-control>
+
+    <SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    private string DropdownLabel = "Label for Dropdown";
+    private string Size = "small";
+    private string DropdownHelperText = "Select an Option";
+    private string ErrorText = "There was an Error";
+    private bool isError = false;
+    private List<DropdownOption>? options;
+    private string? InputValue { get; set; }
+    private string? DateValue { get; set; }
+    private void HandleChange(ChangeEventArgs __e)
+    {
+        Console.WriteLine(__e.Value);
+        InputValue = __e.Value.ToString();
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        options = new List<DropdownOption>()
+         {
+                    new DropdownOption { label = "Option 1", value = "Value 1" },
+                    new DropdownOption { label = "Option 2", value = "Value 2" },
+                    new DropdownOption { label = "Option 3", value = "Value 3" }
+         };
+    }
+}

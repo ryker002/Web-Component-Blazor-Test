@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{BA83D8F2-5C8D-4B1F-9EFD-0DEA7FAC0F4B}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.StudsBlazorTest PreferredExecutionTarget="/Applications/Arc.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StudsBlazorTest/Pages/Index.razor">
+    <Files>
+      <File FileName="StudsBlazorTest/Shared/StudsDropdown.razor" Line="8" Column="16" />
+      <File FileName="StudsBlazorTest/Pages/Counter.razor" Line="9" Column="15" />
+      <File FileName="StudsBlazorTest/Pages/FetchData.razor" Line="28" Column="14" />
+      <File FileName="StudsBlazorTest/Pages/Index.razor" Line="27" Column="33" NotebookId="1" />
+      <File FileName="StudsBlazorTest/Shared/SurveyPrompt.razor" Line="4" Column="1" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StudsBlazorTest" expanded="True">
+            <Node name="StudsBlazorTest" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Index.razor" selected="True" />
+              </Node>
+              <Node name="Shared" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

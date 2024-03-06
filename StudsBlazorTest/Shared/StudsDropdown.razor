@@ -1,0 +1,19 @@
+﻿@using System.Text.Json;
+
+<studs-dropdown size="@Size" options="@SerializedOptions()" test="@Options"></studs-dropdown>
+
+@code {
+    [Parameter]
+    public string? Size { get; set; }
+    [Parameter]
+    public List<DropdownOption> Options { get; set; }
+    private string SerializedOptions()
+    {
+        if (Options != null)
+        {
+            return JsonSerializer.Serialize(Options);
+        }
+        return "[]"; // Return an empty array if Options is null
+    }
+}
+
